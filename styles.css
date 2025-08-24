@@ -1,0 +1,444 @@
+/* Estilos Globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media (max-width: 500px) {
+    /*Sección del perfil con su descripción*/
+    header {
+        padding: 10px;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+        text-align: center;
+        color: #ffffff;
+    }
+
+    .profile-pic {
+        width: 150px;
+        height: auto;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0 auto 20px auto;
+        border: 3px solid #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffffff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        cursor: pointer;
+    }
+
+    .profile-pic:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .profile-pic img {
+        width: 150px;
+        height: 150px;
+    }
+
+    /*Sección del cuerpo de la pagina*/
+    body {
+        background-color: #000000; /* Color de fondo para móvil */
+        padding: 10px;
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+    }
+
+    /*Sección del modal*/
+    .scroll-container {
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .scroll-item {
+        margin: 10px 0;
+        background-color: #ffffff;
+        border: 1px solid #e8e7e7;
+        border-radius: 10px;
+        padding: 15px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        width: 90%;
+        text-align: center;
+        font-size: 1em;
+    }
+
+    .scroll-item:hover {
+        background-color: #c7c7c7;
+    }
+
+    /*Sección del contenido del modal*/
+    .modal {
+        display: none; 
+        position: fixed; 
+        z-index: 1; 
+        left: 0;
+        top: 0;
+        width: 100%; 
+        height: 100%; 
+        overflow: auto; 
+        background-color: rgb(0,0,0); 
+        background-color: rgba(0,0,0,0.4);
+    }
+
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto; 
+        padding: 20px;
+        border: 1px solid #888;
+        width: 90%;
+        border-radius: 10px;
+        text-decoration: none;
+        max-width: 600px;
+    }
+
+    .modal h2 {
+        text-align: center;
+        margin-bottom: 5px;
+        color: #333;
+    }
+
+    .modal h3 {
+        text-align: center;
+        margin-top: 8px;
+        margin-bottom: 10px;
+        color: #007bff;
+    }
+
+    .modal-body-content {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 10px;
+        font-size: 1em;
+        line-height: 1.6;
+        color: #333;
+    }
+
+    .modal-body-content p {
+        margin-bottom: 10px;
+    }
+
+    /*Modal seccion proyectos*/
+    .modal-body-content-projects {
+        text-align: justify;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 10px;
+        font-size: 0.9em;
+        line-height: 1.4;
+        color: #000000;
+    }
+
+    .modal-body-content-projects img {
+        display: block;
+        margin: 0 auto 20px auto;
+        max-width: 90%;
+        height: auto;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    
+
+    /*Sección del cuerpo de la pagina*/
+    .main-content {
+        padding: 10px;
+        max-width: 100%;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .main-content h3 {
+        color: #ffffff;
+        margin-bottom: 10px;
+        font-size: 1.5em;
+    }
+    .main-content p {
+        color: #ffffff;
+        margin-bottom: 10px;
+        font-size: 1em;
+    }
+    .main-content button {
+        background-color: #000000;
+        color: #ffffff;
+        padding: 8px 16px;
+        font-size: 1em;
+    }
+    .main-content button:hover {
+        background-color: #ffffff;
+    }
+
+    .main-content .project-image {
+        display: block;
+        margin: 0 auto 20px auto;
+        max-width: 90%;
+        height: auto;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+
+    .main-content .project-image:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /*Sección del footer*/
+    footer {
+        padding: 10px;
+    }
+    footer p {
+        text-align: center;
+        color: rgb(255, 255, 255);
+        font-size: 0.8em;
+    }
+    footer a {
+        font-size: 0.8em;
+    }
+}
+
+@media (min-width: 501px) {
+    /* Estilos para pantallas más grandes (computadora) */
+
+    /* Sección del perfil con su descripción */
+    header {
+        padding: 20px;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 2.5em; /* Aumentar el tamaño de la fuente */
+        text-align: center;
+        color: #ffffff;
+    }
+
+    header p {
+        font-size: 1.2em; /* Aumentar el tamaño de la fuente */
+        text-align: center;
+        color: #ffffff;
+    }
+
+    .profile-pic {
+        width: 200px; /* Aumentar el tamaño de la imagen de perfil */
+        height: auto;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0 20px 0 0; /* Espacio a la derecha */
+        border: 3px solid #ffffff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        cursor: pointer;
+    }
+
+    .profile-pic:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .profile-pic img {
+        width: 200px; /* Aumentar el tamaño de la imagen de perfil */
+        height: 200px; /* Aumentar el tamaño de la imagen de perfil */
+    }
+
+    /* Sección del cuerpo de la página */
+    body {
+        background-color: #000000; /* Color de fondo para computadora */
+        padding: 20px;
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Una columna */
+        align-content: center;
+        width: 89%;
+    }
+
+    /* Sección del modal */
+    .scroll-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Cuatro columnas */
+        gap: 10px; /* Espacio entre los elementos */
+    }
+
+    .scroll-item {
+        margin: 10px 0;
+        background-color: #ffffff;
+        border: 1px solid #e8e7e7;
+        border-radius: 10px;
+        padding: 46px; /* Aumentar el padding */
+        cursor: pointer;
+        transition: background-color 0.3s;
+        width: 100%; /* Ajustar el ancho para pantallas grandes */
+        text-align: center;
+        font-size: 1.2em; /* Aumentar el tamaño de la fuente */
+    }
+
+    .scroll-item:hover {
+        background-color: #c7c7c7;
+    }
+
+    /* Sección del contenido del modal */
+    .modal {
+        display: none; 
+        position: fixed; 
+        z-index: 1; 
+        left: 0;
+        top: 0;
+        width: 100%; 
+        height: 100%; 
+        overflow: auto; 
+        background-color: rgb(0,0,0); 
+        background-color: rgba(0,0,0,0.4); 
+    }
+
+    .modal-content {
+        background-color: #fefefe;
+        margin: 10% auto; /* Ajustar el margen para pantallas grandes */
+        padding: 30px; /* Aumentar el padding */
+        border: 1px solid #888;
+        width: 60%; /* Ajustar el ancho para pantallas grandes */
+        border-radius: 10px;
+        text-decoration: none;
+    }
+
+    .modal h2 {
+        text-align: center;
+    }
+
+    .modal h3 {
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        color: #000000;
+    }
+
+    .modal-body-content {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 20px; /* Aumentar el padding */
+        font-size: 1em; /* Aumentar el tamaño de la fuente */
+        line-height: 1.6; /* Ajustar el interlineado */
+        color: #000000;
+    }
+
+    /* Modal sección proyectos */
+    .modal-body-content-projects {
+        text-align: justify;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 20px; /* Aumentar el padding */
+        font-size: 1em; /* Aumentar el tamaño de la fuente */
+        line-height: 1.6; /* Ajustar el interlineado */
+        color: #000000;
+    }
+
+    .modal-body-content-projects img {
+        display: block;
+        margin: 0 auto 30px auto; /* Aumentar el margen */
+        max-width: 80%; /* Ajustar el ancho para pantallas grandes */
+        height: auto;
+        border-radius: 10px;
+        margin-top: 20px; /* Aumentar el margen superior */
+    }
+
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    /* Sección del cuerpo de la página */
+    .main-content {
+        padding: 20px; /* Aumentar el padding */
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .main-content h3 {
+        color: #ffffff;
+        margin-bottom: 20px; /* Aumentar el margen inferior */
+        font-size: 2em; /* Aumentar el tamaño de la fuente */
+    }
+
+    .main-content p {
+        color: #ffffff;
+        margin-bottom: 20px; /* Aumentar el margen inferior */
+        font-size: 1.2em; /* Aumentar el tamaño de la fuente */
+    }
+
+    .main-content button {
+        background-color: #000000;
+        color: #ffffff;
+        padding: 10px 20px; /* Aumentar el padding */
+        font-size: 1.2em; /* Aumentar el tamaño de la fuente */
+    }
+
+    .main-content button:hover {
+        background-color: #ffffff;
+    }
+
+    .main-content .project-image {
+        display: block;
+        margin: 0 auto 30px auto; /* Aumentar el margen */
+        max-width: 80%; /* Ajustar el ancho para pantallas grandes */
+        height: auto;
+        border-radius: 10px;
+        margin-top: 20px; /* Aumentar el margen superior */
+    }
+
+    .main-content .project-image:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Sección del footer */
+    footer {
+        padding: 20px; /* Aumentar el padding */
+    }
+
+    footer p {
+        text-align: center;
+        color: rgb(255, 255, 255);
+        font-size: 1em; /* Aumentar el tamaño de la fuente */
+    }
+
+    footer a {
+        font-size: 1em; /* Aumentar el tamaño de la fuente */
+    }
+}
