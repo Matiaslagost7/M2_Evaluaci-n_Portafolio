@@ -9,7 +9,7 @@ $(document).ready(function() {
     const targetModal = $('#' + targetModalId);
     
     // Muestra el modal haciendo que su estilo de display sea 'block'.
-    targetModal.css('display', 'block');
+    targetModal.css('display', 'flex');
   });
 
   // Cuando se hace clic en cualquier elemento con la clase .close-btn
